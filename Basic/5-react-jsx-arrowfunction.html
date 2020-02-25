@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React App</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <style>
+            .main{
+                color:darkcyan;
+            }
+
+            #heading{
+                color: brown;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            let city = "Toronto"
+            
+            const Hello = () => (
+                <div className="main">  
+                    <h1 id ="heading">Hello {city}!</h1>
+                    <h3>Sunshine</h3>
+                    <h5>Welcome to React</h5>
+                </div>
+            )
+
+            ReactDOM.render(
+                    <Hello />,
+                document.getElementById("root")
+        );
+        </script>
+    </body>
+</html>

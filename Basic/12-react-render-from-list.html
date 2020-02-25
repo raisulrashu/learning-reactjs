@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React App</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+    
+            const LakeList = ["Lake Ontario", "Echo Lake", "Cascade Lake", "Maud Lake"];
+
+            const App = ({lakes}) => (
+                <ul>
+                    {lakes.map((lake,i) => 
+                        <li key={i}>{lake}</li>
+                    )}
+                </ul>
+            )
+
+            ReactDOM.render(
+                    <App lakes={LakeList}/>,
+                document.getElementById("root")
+        );
+        </script>
+    </body>
+</html>
